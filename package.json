@@ -1,0 +1,16 @@
+{
+  "name": "aoc-challenge-2015",
+  "version": "1.0.0",
+  "main": "aoc2015.js",
+  "scripts": {
+    "start": "nodemon aoc2015.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}

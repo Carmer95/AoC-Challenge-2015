@@ -1,0 +1,37 @@
+Step 1. Create a Folder - mkdir 'AoC Challenge 2015'
+Step 2. Written Plan - touch plan.txt
+Step 3. Describe the problem - 
+
+Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - 
+the directions he got are a little confusing. He starts on the ground floor (floor 0) and then follows the instructions one character at a time.
+
+An opening parenthesis, (, means he should go up one floor, and a closing parenthesis, ), means he should go down one floor.
+
+The apartment building is very tall, and the basement is very deep; he will never find the top or bottom floors.
+
+Step 4. Create JS file to acquire our input - https://adventofcode.com/2015/day/1/input -> info.txt. 
+Step 5. Conversion - We will need to read this file, stringify it, then convert it to an array to use as manipulatable data.
+Step 6. How to use the data - If Santa goes up one floor for every '(' and down one floor for every')', then we need to count how many of each is contained in our data
+Step 7. Separate and summate the data using a recursive function - Create a function that 
+Step 8. Calculations - Once we have our amounts of each, we simply calculate the difference, and which one is higher, then equate that to its corresponding floor.
+Step 9. Solved! On to Part 2.
+
+Step 10. Part 2 - Given the same instructions, find the position of the first character that causes him to enter the basement (floor -1). 
+The first character in the instructions has position 1, the second character has position 2, and so on.
+
+Example:
+
+) causes him to enter the basement at character position 1.
+()()) causes him to enter the basement at character position 5.
+What is the position of the character that causes Santa to first enter the basement?
+
+Step 11. Our algorithm - We iterate over each character of the data, and pass it a conditional statement, saying to return the index only if there are more ')' than '('.
+Step 12. How? - We use .reduce() and pass it a function that returns the index if rightBracketTemp.length > leftBracketTemp.length and an accumulator, which will hold the current iteration's 
+leftBracketTemp and rightBracketTemp values.
+
+
+
+Step 12. Storage - First we need to store the current amount of '(' in a variable, as well as the current amount of ')'
+Step 13. Discernment - Once we have a variable with the amount of '(' and a variable with the amount of ')', we can compare them with .length.
+Step 14. Comparison - Whenever ')'.length is > '('.length, we return the current index (i).
+Step 15. Finalization - The index returned, is the first position that has more ')' than '(', which will be the position of the character that causes Santa to first enter the basement.
